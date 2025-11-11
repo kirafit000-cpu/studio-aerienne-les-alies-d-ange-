@@ -1,8 +1,6 @@
-/* Подключаем стили FullCalendar (обычно этот вариант работает) */
-@import '@fullcalendar/core/index.css';
-@import '@fullcalendar/timegrid/index.css';
 
-/* === ТЕМА (можете менять цвета здесь) === */
+
+/* === ТЕМА (можете менять цвета) === */
 :root{
 --bg: #0f1117;
 --panel: #151a24;
@@ -15,9 +13,8 @@
 }
 
 *{ box-sizing:border-box; }
-html,body{ height:100%; }
+html, body{ height:100%; margin:0; }
 body{
-margin:0;
 background: radial-gradient(1200px 600px at 20% -10%, #1b2030 0, transparent 60%),
 radial-gradient(900px 500px at 100% 0%, #261a46 0, transparent 60%),
 var(--bg);
@@ -52,12 +49,12 @@ h1{ margin:0 0 12px; font-size:28px; }
 .btn{ background:linear-gradient(90deg, var(--primary), var(--primary-2)); color:#fff; border:none; border-radius:12px; padding:10px 14px; cursor:pointer; }
 .btn:hover{ filter:brightness(1.05); }
 
-/* ====== FULLCALENDAR стили ====== */
+/* ====== FULLCALENDAR оформление (без импортов) ====== */
 #calendar{ margin-top:8px; }
 #calendar .fc{ font-size:14px; }
 .fc .fc-toolbar-title{ font-weight:700; color:var(--text); }
 .fc .fc-button{
-background: #1f2433; border:1px solid var(--border); color:var(--text);
+background:#1f2433; border:1px solid var(--border); color:var(--text);
 border-radius:10px; padding:6px 10px;
 }
 .fc .fc-button:hover{ background:#262c3d; }
@@ -67,8 +64,6 @@ border-radius:10px; padding:6px 10px;
 .fc .fc-timegrid-slot-label{ color:var(--muted); }
 .fc .fc-scrollgrid,
 .fc-theme-standard .fc-scrollgrid{ border-color:var(--border); }
-
-/* События в календаре */
 .fc .fc-event{
 background: linear-gradient(120deg, var(--primary), var(--primary-2));
 border:none; color:white; border-radius:12px; padding:2px 6px;
