@@ -1,5 +1,9 @@
 [
-  { "id": "1", "title": "Pole débutant", "start": "2025-11-10T18:00:00", "end": "2025-11-10T19:15:00" },
-  { "id": "2", "title": "Aerial Yoga",   "start": "2025-11-11T10:00:00", "end": "2025-11-11T11:00:00" },
-  { "id": "3", "title": "Cerceau inter", "start": "2025-11-12T19:00:00", "end": "2025-11-12T20:15:00" }
+{ "id":"1", "title":"Stretching débutant", "type":"stretching", "start":"2025-11-10T18:00:00", "end":"2025-11-10T19:00:00", "capacity":12, "booked":7 },
+{ "id":"2", "title":"Cerceau intermédiaire", "type":"cerceau", "start":"2025-11-11T19:00:00", "end":"2025-11-11T20:15:00", "capacity":10, "booked":10 },
+{ "id":"3", "title":"Dance Heels", "type":"dance heels", "start":"2025-11-12T20:30:00", "end":"2025-11-12T21:30:00", "capacity":15, "booked":9 },
+{ "id":"4", "title":"Tissu débutant", "type":"tissu", "start":"2025-11-13T18:30:00", "end":"2025-11-13T19:45:00", "capacity":8, "booked":4 },
+{ "id":"5", "title":"Hamac relax", "type":"hamac", "start":"2025-11-14T11:00:00", "end":"2025-11-14T12:00:00", "capacity":10, "booked":6 },
+{ "id":"6", "title":"Renforcement musculaire", "type":"renforcement musculaire", "start":"2025-11-15T17:30:00", "end":"2025-11-15T18:30:00", "capacity":12, "booked":12 },
+{ "id":"7", "title":"Kids Aerial Gymnastics", "type":"kids aerial gymnastics", "start":"2025-11-16T10:00:00", "end":"2025-11-16T11:00:00", "capacity":10, "booked":5 }
 ]
