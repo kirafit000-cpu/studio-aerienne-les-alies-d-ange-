@@ -1,18 +1,28 @@
-export const metadata = { title: 'Studio Schedule', description: 'Public schedule' }
-import './globals.css'
-import Link from 'next/link'
+export const metadata = {
+title: "Les Ailes d’Ange — Planning",
+description: "Planning des cours du studio Les Ailes d’Ange"
+}
+
+import "./globals.css"
+import Link from "next/link"
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="fr">
-      <body>
-        <header style={{borderBottom:'1px solid #eee', padding:'12px 16px'}}>
-          <nav style={{display:'flex', gap:16}}>
-            <Link href="/">Home</Link>
-            <Link href="/schedule">Schedule</Link>
-          </nav>
-        </header>
-        <main style={{maxWidth:960, margin:'24px auto', padding:'0 16px'}}>{children}</main>
-      </body>
-    </html>
-  )
+return (
+<html lang="fr">
+<body>
+<header className="navbar">
+<div className="container nav-inner">
+<Link href="/" className="logo">Les Ailes d’Ange</Link>
+<nav className="nav-links">
+<Link href="/" className="nav-link">Accueil</Link>
+<Link href="/schedule" className="nav-link">Planning</Link>
+</nav>
+</div>
+</header>
+<main className="container">
+{children}
+</main>
+</body>
+</html>
+)
 }
