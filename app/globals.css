@@ -1,70 +1,67 @@
 
+:root{
+--bg:#0f1117; --panel:#151a24;
+--primary:#7c3aed; --primary-2:#a855f7;
+--text:#e8eefc; --muted:#9aa4b2; --border:#232836;
+--card-shadow:0 10px 30px rgba(0,0,0,.35);
+}
 
-/* Цвета по типу (имена генерятся из поля "type") */
-.fc .type-stretching { background: linear-gradient(120deg,#14b8a6,#2dd4bf) !important; }
-.fc .type-cerceau { background: linear-gradient(120deg,#2563eb,#60a5fa) !important; }
-.fc .type-dance-heels { background: linear-gradient(120deg,#db2777,#f472b6) !important; }
-.fc .type-tissu { background: linear-gradient(120deg,#7c3aed,#a78bfa) !important; }
-.fc .type-hamac { background: linear-gradient(120deg,#059669,#34d399) !important; }
-.fc .type-renforcement-musculaire { background: linear-gradient(120deg,#ef4444,#f97316) !important; }
-.fc .type-kids-aerial-gymnastics { background: linear-gradient(120deg,#f59e0b,#fde047) !important; color:#1f2937 !important; } /* читаемость */
-
-
-*{ box-sizing:border-box; }
-html, body{ height:100%; margin:0; }
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
 body{
-background: radial-gradient(1200px 600px at 20% -10%, #1b2030 0, transparent 60%),
+background:
+radial-gradient(1200px 600px at 20% -10%, #1b2030 0, transparent 60%),
 radial-gradient(900px 500px at 100% 0%, #261a46 0, transparent 60%),
 var(--bg);
 color:var(--text);
-font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
 }
 
 /* Контейнер и карточки */
-.container{ max-width: 980px; margin: 24px auto; padding: 0 16px; }
-.card{
-background: var(--panel);
-border:1px solid var(--border);
-border-radius:16px;
-padding:20px;
-box-shadow: var(--card-shadow);
-}
+.container{max-width:980px;margin:24px auto;padding:0 16px}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:20px;box-shadow:var(--card-shadow)}
 
 /* Навигация */
-.navbar{ position:sticky; top:0; z-index:20; background:rgba(15,17,23,.7); backdrop-filter: blur(8px); border-bottom:1px solid var(--border);}
-.nav-inner{ display:flex; align-items:center; justify-content:space-between; padding:12px 16px; }
-.logo{ font-weight:700; letter-spacing:.3px; text-decoration:none; color:var(--text); }
-.nav-links{ display:flex; gap:16px; }
-.nav-link{ text-decoration:none; color:var(--muted); padding:6px 10px; border-radius:10px; }
-.nav-link:hover{ color:var(--text); background:#1d2230; }
+.navbar{position:sticky;top:0;z-index:20;background:rgba(15,17,23,.7);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 16px}
+.logo{font-weight:700;letter-spacing:.3px;text-decoration:none;color:var(--text)}
+.nav-links{display:flex;gap:16px}
+.nav-link{text-decoration:none;color:var(--muted);padding:6px 10px;border-radius:10px}
+.nav-link:hover{color:var(--text);background:#1d2230}
 
-/* Заголовки/текст */
-h1{ margin:0 0 12px; font-size:28px; }
-.muted{ color:var(--muted); }
-.small{ font-size:12px; }
+/* Заголовки / текст */
+h1{margin:0 0 12px;font-size:28px}
+.muted{color:var(--muted)}
+.small{font-size:12px}
 
-/* Кнопки (на будущее) */
-.btn{ background:linear-gradient(90deg, var(--primary), var(--primary-2)); color:#fff; border:none; border-radius:12px; padding:10px 14px; cursor:pointer; }
-.btn:hover{ filter:brightness(1.05); }
+/* Кнопки (про запас) */
+.btn{background:linear-gradient(90deg,var(--primary),var(--primary-2));color:#fff;border:none;border-radius:12px;padding:10px 14px;cursor:pointer}
+.btn:hover{filter:brightness(1.05)}
 
-/* ====== FULLCALENDAR оформление (без импортов) ====== */
-#calendar{ margin-top:8px; }
-#calendar .fc{ font-size:14px; }
-.fc .fc-toolbar-title{ font-weight:700; color:var(--text); }
-.fc .fc-button{
-background:#1f2433; border:1px solid var(--border); color:var(--text);
-border-radius:10px; padding:6px 10px;
-}
-.fc .fc-button:hover{ background:#262c3d; }
-.fc .fc-button-primary{ background:linear-gradient(90deg, var(--primary), var(--primary-2)); border:none; }
-.fc .fc-day-today{ background: rgba(124,58,237,.12); }
-.fc .fc-col-header-cell-cushion,
-.fc .fc-timegrid-slot-label{ color:var(--muted); }
-.fc .fc-scrollgrid,
-.fc-theme-standard .fc-scrollgrid{ border-color:var(--border); }
-.fc .fc-event{
-background: linear-gradient(120deg, var(--primary), var(--primary-2));
-border:none; color:white; border-radius:12px; padding:2px 6px;
-box-shadow: 0 6px 18px rgba(124,58,237,.35);
-}
-#calendar { min-height: 600px; }
+/* FullCalendar */
+#calendar{min-height:600px;margin-top:8px}
+#calendar .fc{font-size:14px}
+.fc .fc-toolbar-title{font-weight:700;color:var(--text)}
+.fc .fc-button{background:#1f2433;border:1px solid var(--border);color:var(--text);border-radius:10px;padding:6px 10px}
+.fc .fc-button:hover{background:#262c3d}
+.fc .fc-button-primary{background:linear-gradient(90deg,var(--primary),var(--primary-2));border:none}
+.fc .fc-day-today{background:rgba(124,58,237,.12)}
+.fc .fc-col-header-cell-cushion,.fc .fc-timegrid-slot-label{color:var(--muted)}
+.fc .fc-scrollgrid,.fc-theme-standard .fc-scrollgrid{border-color:var(--border)}
+.fc .fc-event{background:linear-gradient(120deg,var(--primary),var(--primary-2));border:none;color:#fff;border-radius:12px;padding:2px 6px;box-shadow:0 6px 18px rgba(124,58,237,.35)}
+
+/* Контент события */
+.evt-title{font-weight:700}
+.evt-meta{font-size:12px;opacity:.9;margin-top:2px}
+.badge{display:inline-block;padding:2px 8px;border-radius:999px;background:rgba(255,255,255,.18);color:#fff}
+.badge-full{background:#ef4444}
+
+/* Цвета по типу (из поля "type") */
+.fc .type-stretching{background:linear-gradient(120deg,#14b8a6,#2dd4bf)!important}
+.fc .type-cerceau{background:linear-gradient(120deg,#2563eb,#60a5fa)!important}
+.fc .type-dance-heels{background:linear-gradient(120deg,#db2777,#f472b6)!important}
+.fc .type-tissu{background:linear-gradient(120deg,#7c3aed,#a78bfa)!important}
+.fc .type-hamac{background:linear-gradient(120deg,#059669,#34d399)!important}
+.fc .type-renforcement-musculaire{background:linear-gradient(120deg,#ef4444,#f97316)!important}
+.fc .type-kids-aerial-gymnastics{background:linear-gradient(120deg,#f59e0b,#fde047)!important;color:#1f2937!important}
+.fc .is-full{filter:saturate(.7) brightness(.95)}
