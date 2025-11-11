@@ -3,35 +3,42 @@ import { useEffect } from 'react'
 import { Calendar } from '@fullcalendar/core'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
+import frLocale from '@fullcalendar/core/locales/fr'
 
 export default function SchedulePage() {
-  useEffect(() => {
-    const el = document.getElementById('calendar') as HTMLElement
-    let cal: Calendar | null = null
-    async function run() {
-      const events = await fetch('/events.json').then(r => r.json())
-      cal = new Calendar(el, {
-        plugins: [timeGridPlugin, interactionPlugin],
-        initialView: 'timeGridWeek',
-        locale: 'fr',
-        height: 'auto',
-        slotMinTime: '08:00:00',
-        slotMaxTime: '22:00:00',
-        eventTimeFormat: { hour: '2-digit', minute: '2-digit', hour12: false },
-        events,
-        eventClick(info) { alert(`Занятие: ${info.event.title}\n${info.event.start?.toLocaleString()}`) }
-      })
-      cal.render()
-    }
-    run()
-    return () => { cal?.destroy() }
-  }, [])
+useEffect(() => {
+const el = document.getElementById('calendar') as HTMLElement
+let cal: Calendar | null = null
 
-  return (
-    <div>
-      <h1 style={{marginBottom:12}}>Расписание</h1>
-      <div id="calendar" />
-      <p style={{color:'#666', fontSize:12, marginTop:8}}>Демо-данные из <code>/public/events.json</code>.</p>
-    </div>
-  )
+async function run() {
+const events = await fetch('/events.json').then(r => r.json())
+cal = new Calendar(el, {
+plugins: [timeGridPlugin, interactionPlugin],
+locales: [frLocale],
+locale: 'fr',
+timeZone: 'Europe/Paris',
+initialView: 'timeGridWeek',
+firstDay: 1,
+height: 'auto',
+slotMinTime: '08:00:00',
+slotMaxTime: '22:00:00',
+eventTimeFormat: { hour: '2-digit', minute: '2-digit', hour12: false },
+events
+})
+cal.render()
+}
+
+run()
+return () => { cal?.destroy() }
+}, [])
+
+return (
+<section className="card">
+<h1>Planning</h1>
+<div id="calendar" />
+<p className="muted small" style={{marginTop:8}}>
+Données de démo : <code>/public/events.json</code>.
+</p>
+</section>
+)
 }
