@@ -67,3 +67,4 @@ background: linear-gradient(120deg, var(--primary), var(--primary-2));
 border:none; color:white; border-radius:12px; padding:2px 6px;
 box-shadow: 0 6px 18px rgba(124,58,237,.35);
 }
+#calendar { min-height: 600px; }
