@@ -1,16 +1,14 @@
 
 
-/* === ТЕМА (можете менять цвета) === */
-:root{
---bg: #0f1117;
---panel: #151a24;
---primary: #7c3aed; /* фиолетовый */
---primary-2: #a855f7;
---text: #e8eefc;
---muted: #9aa4b2;
---border: #232836;
---card-shadow: 0 10px 30px rgba(0,0,0,.35);
-}
+/* Цвета по типу (имена генерятся из поля "type") */
+.fc .type-stretching { background: linear-gradient(120deg,#14b8a6,#2dd4bf) !important; }
+.fc .type-cerceau { background: linear-gradient(120deg,#2563eb,#60a5fa) !important; }
+.fc .type-dance-heels { background: linear-gradient(120deg,#db2777,#f472b6) !important; }
+.fc .type-tissu { background: linear-gradient(120deg,#7c3aed,#a78bfa) !important; }
+.fc .type-hamac { background: linear-gradient(120deg,#059669,#34d399) !important; }
+.fc .type-renforcement-musculaire { background: linear-gradient(120deg,#ef4444,#f97316) !important; }
+.fc .type-kids-aerial-gymnastics { background: linear-gradient(120deg,#f59e0b,#fde047) !important; color:#1f2937 !important; } /* читаемость */
+
 
 *{ box-sizing:border-box; }
 html, body{ height:100%; margin:0; }
